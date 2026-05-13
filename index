@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>С Днём Рождения, Андрюха! 🐸✨⭐ - Лови лягушек!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="falling-container"></div>
+    <div id="confetti-container"></div>
+
+    <!-- СЧЁТЧИК ЛЯГУШЕК (слева вверху) -->
+    <div class="frog-counter" id="frogCounter">
+        <img src="images/gdfrg.png" alt="лягушка" class="counter-icon">
+        <span id="catchCount">0</span>
+        <span class="counter-text">/24</span>
+    </div>
+
+    <!-- ПЛАВАЮЩИЙ ПОДАРОК (появляется после победы) -->
+    <div id="floatingGift" class="floating-gift" style="display: none;">
+        <img src="images/frog12.png" alt="подарок" class="gift-img">
+    </div>
+
+    <!-- ФОНОВЫЕ ЛЯГУШКИ PNG -->
+    <div class="bg-frog bg-frog-1"><img src="images/frog1.png" alt="лягушка" loading="lazy"></div>
+    <div class="bg-frog bg-frog-2"><img src="images/frog2.png" alt="лягушка" loading="lazy"></div>
+    <div class="bg-frog bg-frog-3"><img src="images/frog3.png" alt="лягушка" loading="lazy"></div>
+    <div class="bg-frog bg-frog-4"><img src="images/frog6.png" alt="лягушка" loading="lazy"></div>
+    <div class="bg-frog bg-frog-5"><img src="images/frog1.png" alt="лягушка" loading="lazy"></div>
+    <div class="bg-frog bg-frog-6"><img src="images/frog2.png" alt="лягушка" loading="lazy"></div>
+    <div class="bg-frog bg-frog-7"><img src="images/frog3.png" alt="лягушка" loading="lazy"></div>
+    <div class="bg-frog bg-frog-8"><img src="images/frog6.png" alt="лягушка" loading="lazy"></div>
+    <div class="bg-frog bg-frog-9"><img src="images/frog1.png" alt="лягушка" loading="lazy"></div>
+    <div class="bg-frog bg-frog-10"><img src="images/frog2.png" alt="лягушка" loading="lazy"></div>
+    <div class="bg-frog bg-frog-11"><img src="images/frog3.png" alt="лягушка" loading="lazy"></div>
+    <div class="bg-frog bg-frog-12"><img src="images/frog6.png" alt="лягушка" loading="lazy"></div>
+
+    <!-- ФОНОВЫЕ ЗВЁЗДОЧКИ PNG -->
+    <div class="bg-star-img bg-star-img-1"><img src="images/star1.png" alt="звезда" loading="lazy"></div>
+    <div class="bg-star-img bg-star-img-2"><img src="images/star1.png" alt="звезда" loading="lazy"></div>
+    <div class="bg-star-img bg-star-img-3"><img src="images/star1.png" alt="звезда" loading="lazy"></div>
+    <div class="bg-star-img bg-star-img-4"><img src="images/star1.png" alt="звезда" loading="lazy"></div>
+    <div class="bg-star-img bg-star-img-5"><img src="images/star1.png" alt="звезда" loading="lazy"></div>
+    <div class="bg-star-img bg-star-img-6"><img src="images/star1.png" alt="звезда" loading="lazy"></div>
+    <div class="bg-star-img bg-star-img-7"><img src="images/star1.png" alt="звезда" loading="lazy"></div>
+    <div class="bg-star-img bg-star-img-8"><img src="images/star1.png" alt="звезда" loading="lazy"></div>
+    <div class="bg-star-img bg-star-img-9"><img src="images/star1.png" alt="звезда" loading="lazy"></div>
+    <div class="bg-star-img bg-star-img-10"><img src="images/star1.png" alt="звезда" loading="lazy"></div>
+
+    <div class="container">
+        <div class="header">
+            <div class="stars-around">
+                <img src="images/frog-mask4.png" alt="🐸" class="small-mask-icon" loading="lazy">
+                <img src="images/frog-mask5.png" alt="✨" class="small-mask-icon" loading="lazy">
+                <img src="images/frog-mask6.png" alt="⭐" class="small-mask-icon" loading="lazy">
+                <img src="images/frog-mask7.png" alt="✨" class="small-mask-icon" loading="lazy">
+                <img src="images/frog-mask8.png" alt="⭐" class="small-mask-icon" loading="lazy">
+            </div>
+            
+            <h1>
+                <span class="h1-line1">С Днём Рождения, Андрюха!</span>
+                <span class="h1-line2">🐸 Дырявое ухо, ЛОВИ ЛЯГУШЕК! 🐸</span>
+            </h1>
+            
+            <div class="stars-around">
+                <img src="images/frog-mask9.png" alt="✨" class="small-mask-icon" loading="lazy">
+                <img src="images/frog-mask.png" alt="⭐" class="small-mask-icon" loading="lazy">
+                <img src="images/frog-mask4.png" alt="✨" class="small-mask-icon" loading="lazy">
+                <img src="images/frog-mask5.png" alt="⭐" class="small-mask-icon" loading="lazy">
+                <img src="images/frog-mask6.png" alt="✨" class="small-mask-icon" loading="lazy">
+            </div>
+        </div>
+
+        <!-- ГЛАВНОЕ ФОТО -->
+        <div class="main-frog-wrapper">
+            <div class="main-frog-container">
+                <div class="frog-leg left-leg top">🐸</div>
+                <div class="frog-leg right-leg top">🐸</div>
+                <div class="main-frog-face">
+                    <div class="frog-mask-wrapper">
+                        <img src="images/photo_2025-07-12_05-29-31.jpg" alt="Главное фото" class="main-frog-img" loading="lazy">
+                    </div>
+                    <div class="main-frog-eyes">
+                        <div class="main-eye left">👁️</div>
+                        <div class="main-eye right">👁️</div>
+                    </div>
+                </div>
+                <div class="frog-leg left-leg bottom">🐸</div>
+                <div class="frog-leg right-leg bottom">🐸</div>
+            </div>
+            <button class="start-game-btn" id="startGameBtn">
+                <img src="images/frog7.png" alt="старт" class="start-icon" loading="lazy">
+                <span>НАЧАТЬ ИГРУ!</span>
+            </button>
+        </div>
+
+        <!-- ГАЛЕРЕЯ ФОТО -->
+        <div class="gallery" id="photoGallery"></div>
+
+        <!-- АСТРОЛОГИЧЕСКАЯ ВСТАВКА -->
+        <div class="horoscope">
+            <div class="horoscope-title">
+                <img src="images/frog-mask7.png" alt="✨" class="small-mask-icon" loading="lazy">
+                Астрологическая вставка
+                <img src="images/gyb.png" alt="🌙" class="horoscope-icon" loading="lazy">
+            </div>
+            <div class="horoscope-text">
+                <p>🔮 <strong>Андрюха, ты — Телец.</strong> Знаешь, что это значит? Ты упёртая, но невероятно надёжная. Как скала. Как солянка после тусовки — твёрдая, сытная и согревающая 🍲</p>
+                <p>⭐ В этом году <strong>Юпитер</strong> будет улыбаться твоему знаку. А <strong>ретроградный Меркурий</strong> пусть останется в прошлом — мы его переживём, как пережили все наши ссоры. <em>«Ща время такое»</em> — но это время пройдёт, а мы останемся.</p>
+                <p>🌙 <strong>Мини-гороскоп на год:</strong> тебя ждёт внутренняя сила, которую ты сама в себе откроешь. Ты станешь спокойнее и увереннее. И главное — запомни: <strong>«Да просто живи и не парься»</strong>. Это твоя мантра на следующие 12 месяцев.</p>
+                <p>💫 И пусть все тревоги останутся позади. Ты — сильная. Ты — моя любимая лягушка. И вместе мы справимся с любым ретроградным Меркурием.</p>
+            </div>
+            <div class="horoscope-footer">
+                <img src="images/gyb.png" alt="🌙" class="horoscope-footer-icon" loading="lazy">
+            </div>
+        </div>
+
+        <!-- ПОЗДРАВЛЕНИЕ -->
+        <div class="message-wrapper">
+            <div class="message-bg-mask"></div>
+            <div class="message-bg-mask message-bg-mask-2"></div>
+            <div class="message-bg-mask message-bg-mask-3"></div>
+            <div class="message">
+                <div class="message-stars-top">
+                    <img src="images/frog-mask4.png" alt="⭐" class="small-mask-icon" loading="lazy">
+                    <img src="images/frog-mask5.png" alt="✨" class="small-mask-icon" loading="lazy">
+                    <img src="images/frog-mask6.png" alt="⭐" class="small-mask-icon" loading="lazy">
+                    <img src="images/frog-mask7.png" alt="✨" class="small-mask-icon" loading="lazy">
+                    <img src="images/frog-mask8.png" alt="⭐" class="small-mask-icon" loading="lazy">
+                </div>
+                <p>🐸✨ Дорогая Анечка! ✨🐸 <img src="images/mu.png" alt="❤️" class="inline-icon" loading="lazy"></p>
+                <p>10 лет — это целая жизнь. 🎂<br>
+                Спасибо тебе за каждый безумный день, каждую ссору и каждое примирение.<br>
+                Жаль, что мы ссорились, но знаешь что? Это делало нашу дружбу только крепче. <img src="images/frog-mask5.png" alt="✨" class="small-mask-icon" loading="lazy"></p>
+                <p>С тобой я прошла через огонь, воду и медные трубы (и даже через дырявое ухо <img src="images/frog-mask7.png" alt="✨" class="small-mask-icon" loading="lazy">).<br>
+                Ещё один год с тобой — это подарок. Ты — моя лягушачья половинка 🐸💚 <img src="images/mu.png" alt="❤️" class="inline-icon" loading="lazy"></p>
+                <p>Я рада, что мы есть друг у друга. Надеюсь, мы будем вместе всю жизнь —<br>
+                старыми бабками с вейпами и шоколадками, будем вспоминать, как ловили мух удачи 🪰</p>
+                <p><strong>Этот год был тяжёлым, но он сделал нас сильнее. Я желаю тебе счастья — такого, чтобы ничего не тревожило. Чтобы ты стала сильной для самой себя. И чтобы мы больше никогда не теряли друг друга.</strong> ❤️ <img src="images/mu.png" alt="❤️" class="inline-icon" loading="lazy"></p>
+                <p>Впереди ещё столько безумного бреда — и я буду рядом, чтобы смеяться над ним вместе с тобой! ❤️<br>
+                Ква-ква-ква, обнимаю свою самую лучшую лягушку на свете! 🐸</p>
+                
+                <div class="message-stars-bottom">
+                    <img src="images/frog-mask9.png" alt="⭐" class="small-mask-icon" loading="lazy">
+                    <img src="images/frog-mask.png" alt="✨" class="small-mask-icon" loading="lazy">
+                    <img src="images/frog-mask4.png" alt="⭐" class="small-mask-icon" loading="lazy">
+                    <img src="images/frog-mask5.png" alt="✨" class="small-mask-icon" loading="lazy">
+                    <img src="images/frog-mask6.png" alt="⭐" class="small-mask-icon" loading="lazy">
+                </div>
+            </div>
+        </div>
+
+        <!-- ДЕКОРАТИВНЫЕ ИКОНКИ ВНИЗУ -->
+        <div class="decoration-icons">
+            <img src="images/frog9.png" alt="лягушка" class="deco-icon deco-icon-1" loading="lazy">
+            <img src="images/frog10.png" alt="лягушка" class="deco-icon deco-icon-2" loading="lazy">
+            <img src="images/ac.png" alt="СЮРПРИЗ" class="deco-icon-special deco-icon-3" id="surpriseIcon" loading="lazy">
+            <img src="images/frog14.png" alt="лягушка" class="deco-icon deco-icon-4" loading="lazy">
+            <img src="images/acc.png" alt="цветок" class="deco-icon deco-icon-5" loading="lazy">
+        </div>
+
+        <button id="partyButton">
+            <img src="images/class.png" alt="кнопка" class="party-btn-img" loading="lazy">
+            <span>НАЖМИ</span>
+        </button>
+    </div>
+
+    <div class="scroll-top" id="scrollTopBtn">
+        <img src="images/frog5.png" alt="лягушка" class="scroll-frog-img" loading="lazy">
+    </div>
+
+    <audio id="bgMusic" src="images/spongebob-production.mp3" loop preload="auto"></audio>
+    <audio id="gameSound" src="images/confusion-sound-effect.mp3" loop preload="auto"></audio>
+    <audio id="catchSound" src="images/frog-croaking.mp3" preload="auto"></audio>
+    <audio id="winSound" src="images/18775-rickroll354.mp3" preload="auto"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
